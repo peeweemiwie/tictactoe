@@ -2,7 +2,7 @@
 
 ## To Do:
 
-- Indicate which player is playing currently by high-lighting active player
+- ~Indicate which player is playing currently by high-lighting active player~
 - When a player clicks cell, icon ( 'O' or 'X') gets rendered
 - ID of the cell gets pushed to each players array
 
