@@ -8,9 +8,9 @@
 
 - ~After 3rd click (per player)~
   - ~function hasWon => check the current player's array to see if it matches winning pattern~
-    - ~If winning -> ~
+    - ~If winning ->~
       - ~cells of winning pattern gets high-lighted~
-      - ~Player chip gets high-lighted ~
+      - ~Player chip gets high-lighted~
     - ~Else -> next player plays (hasWon)~
 
 ## To Add:
