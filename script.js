@@ -61,6 +61,12 @@ const diableCells = () => {
   })
 }
 
+const removeClassName = () => {
+  document.querySelectorAll('.player').forEach(el => {
+    el.classList.remove('current');
+  })
+}
+
 // check currentPlayerArr to see if it matches with one of arrays inside winningPattern
 let didWin = () => {
   for(let arr of winningPattern){
@@ -94,9 +100,7 @@ document.querySelectorAll('.cell').forEach(cell => {
       let returnedResult = didWin();
       if (currentPlayerArr.length === 5 && !returnedResult){
         document.querySelector('.sub-title').classList.add('tied');
-        document.querySelectorAll('.player').forEach(el => {
-          el.classList.remove('current');
-        })
+        removeClassName();
       } else if (!returnedResult){
         togglePlayer();
       }
