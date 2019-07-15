@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TicTacToe!</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <h1 class="title">Tic Tac Toe!</h1>
+      <div class="sub-title flex-wrapper">
+        <div class="player flex-wrapper player1">
+          <i class="material-icons">panorama_fish_eye</i>
+          Player1
+        </div> 
+        <p>vs</p>
+        <div class="player flex-wrapper player2">
+          <i class="material-icons">close</i>
+          Player2
+        </div>
+      </div>
+    </header>
+    <main class="cell-wrapper">
+      <button class="cell top-1" id="a1"></button>
+      <button class="cell top-2" id="a2"></button>
+      <button class="cell top-3" id="a3"></button>
+      <button class="cell meddle-1" id="b1"></button>
+      <button class="cell meddle-2" id="b2"></button>
+      <button class="cell meddle-3" id="b3"></button>
+      <button class="cell bottom-1" id="c1"></button>
+      <button class="cell bottom-2" id="c2"></button>
+      <button class="cell bottom-3" id="c3"></button>
+    </main>
+    <footer class="footer">
+      <button type="reset" class="btn sub-title" disabled>Play again!</button>
+    </footer>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

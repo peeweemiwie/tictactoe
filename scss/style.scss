@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+$aqua: aqua;
+$darkgray: rgb(32, 32, 32);
+$lightgray: lighten($darkgray, 10);
+$white: rgb(255, 255, 255);
+body {
+  background-color: $darkgray;
+}
+.flex-wrapper {
+  align-items: center;
+  display: flex;
+}
+.page-wrapper {
+  margin: 0 auto;
+  width: 400px;
+}
+ 
+.title, .sub-title {
+  font-weight: 300;
+  text-align: center;
+}
+.title {
+  color: $aqua;
+}
+.badge {
+  background-color: $lightgray;
+  border: 1px solid fuchsia;
+  border-radius: 15px;
+  color: fuchsia;
+  display: block;
+  font-size: 40px;
+  position: absolute;
+  padding: 0 10px;
+}
+.pill {
+  border: 1px solid gray;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  opacity: .3;
+  padding: 10px;
+}
+.sub-title {
+  color: $white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  &.flex-wrapper {
+    justify-content: space-between;
+  }
+  &.tied {
+    &:after {
+      @extend .badge;
+      content: 'tied!';
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  .player {
+    @extend .pill;
+    width: 160px;
+    &.current {
+      border-color: fuchsia;
+      opacity: 1;
+      &.won {
+        position: relative;
+        &:after {
+          @extend .badge;
+          content: 'won!';
+          top: -40px;
+        }
+      }
+    }
+  }
+}  
+
+.cell-wrapper {
+  $wrapper-size: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 33%);
+  height: $wrapper-size;
+  width: $wrapper-size;
+  .cell {
+    background-color: $lightgray;
+    border-color: $aqua;
+    .material-icons {
+      color: $white;
+      font-size: 50px;
+    }
+    &.highlight {
+      background-color: rgba(fuchsia, .5);
+    }
+  }
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: right;
+  .btn {
+    @extend .pill;
+    background: transparent;
+    border-color: $aqua;
+    opacity: 1;
+    &:disabled {
+      opacity: .5;
+    }
+  }
+}
