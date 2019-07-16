@@ -20,7 +20,7 @@ const winningPattern = [
   ['a3', 'b2', 'c1']
 ];
 
-// initial assignment of player
+// initial assignment of a player
 const assignCurrentPlayer = () =>{
   if(currentPlayer === undefined) {
     currentPlayer = 'player1'
@@ -55,9 +55,9 @@ let highlighCells = array => {
   })
 }
 
-const diableCells = () => {
+const diabledCells = status => {
   document.querySelectorAll('.cell').forEach(el => {
-    el.disabled = true;
+    el.disabled = status;
   })
 }
 
@@ -76,7 +76,7 @@ let didWin = () => {
         if (idPlayerArr === idPatternArr) {
           match++;
           if(match === 3){
-            diableCells();
+            diabledCells(true);
             highlighCells(arr);
             document.querySelector('.current').classList.add('won');
             return true;
