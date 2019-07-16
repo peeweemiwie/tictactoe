@@ -13,9 +13,11 @@
       - ~Player chip gets high-lighted~
     - ~Else -> next player plays (hasWon)~
 
-## To Add:
+## To do list for pair programming:
 
-- When reset button is clicked it:
-  - prompted to ask if really want to be cleared
-  - clear the board
-  - if won -> remove high-light from cells and a winner chip
+I could like to add features below to 'Play again!' button when a player clicks:
+
+- remove 'won!' or 'tied' badge
+- remove all x and O icons 
+- enable cell buttons
+- enable 'Play again!' button

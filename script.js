@@ -55,6 +55,7 @@ let highlighCells = array => {
   })
 }
 
+// set disabled states on cells - true / false
 const diabledCells = status => {
   document.querySelectorAll('.cell').forEach(el => {
     el.disabled = status;
@@ -111,8 +112,8 @@ document.querySelectorAll('.cell').forEach(cell => {
   })
 })
 
-// project for pair programming
-// I could like to activate 'Play again!' button which will
+// To do list for pair programming
+// I could like to add feature to 'Play again!' button which will:
 // 1) remove 'won!' or 'tied' badge
 // 2) remove all x and O icons 
 // 3) enable cell buttons
